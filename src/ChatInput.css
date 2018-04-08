@@ -1,0 +1,28 @@
+
+.emoji {
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  padding: 0 2px;
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+
+.emoji:hover {
+  transform: scale(1.4);
+}
+
+.emoji:active {
+  transform: scale(1.2);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px -2px -3px;
+}
+
+.trendIcon {
+  cursor: pointer;
+}

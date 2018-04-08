@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Introspect",
+  "description": "Provides insights as to how your messages may be perceived",
+  "version": "1.0",
+
+  "icons": {
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["lib/inject.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "background": {
+    "scripts": ["lib/background.js"]
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "web_accessible_resources": [
+    "lib/hook.js"
+  ],
+
+  "externally_connectable": {
+    "matches": ["*://*.facebook.com/*"]
+  }
+}
